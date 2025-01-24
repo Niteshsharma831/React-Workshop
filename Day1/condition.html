@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Count Only Characters</h1>
+    <input type="text" id="inputText">
+    <h1 id="charCount"></h1>
+    <button onclick="myfunction2()">Count Characters</button>
+<br><br><br>
+
+
+    <input type="text" id="inputText">
+    <h1 id="charCount2"></h1>
+    <button onclick="myfunction3()">Count Characters</button>
+
+
+
+    <script>
+        function myFunction(str, word) {
+            const regrx = new RegExp(word, 'gi'); 
+            const match = str.match(regrx); 
+            return match ? match.length : 0;  
+        }
+
+        const word = "a";
+        //console.log(myFunction(`The quick brown fox ${word}`));
+        const text = "The quick A brown fox";
+        console.log(myFunction(text, word));  
+
+
+
+
+
+        function myfunction2() {
+            const text = document.getElementById('inputText').value;
+            const match = text.match(/[a-zA-Z]/g);
+            const characterCount = match ? match.length : 0;
+            console.log(characterCount);
+        }
+
+
+        function myfunction3() {
+            if(charCount2 >= 20) {
+                const text = document.getElementById('inputText').value;
+                const match = text.match(/[a-zA-Z]/g);
+                const characterCount2 = match ? match.length : 0;
+                console.log(characterCount2);
+            }
+            else {
+                alert("Input should have 12 characters");
+            }
+        }
+
+    </script>
+</body>
+</html>
